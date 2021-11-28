@@ -70,13 +70,13 @@ $("#task-form-modal .btn-primary").click(function() {
   var taskDate = $("#modalDueDate").val();
 
   if (taskText && taskDate) {
-    createTask(taskText, taskDate, "toDo");
+    createTask(taskText, taskDate, "toDo"); //why is this causing errors
 
     // close modal
     $("#task-form-modal").modal("hide");
 
     // save in tasks array
-    tasks.toDo.push({
+    tasks.toDo.push({ //problem here
       text: taskText,
       date: taskDate
     });
